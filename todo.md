@@ -1,5 +1,7 @@
 
-# todo
+# TO DO
+
+## gameplay
 
 map
 
@@ -12,6 +14,10 @@ consumes cells
 
 animals (?)
 
-rendering
-
 celularam // memory!
+
+## implementations
+
+rendering (sprites)
+
+polar coordinates !!

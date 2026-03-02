@@ -1,6 +1,7 @@
 ignoreddir/
 .vscode/
 *.exe*
+*.out
 
 .tof.conf
 tof_output.md

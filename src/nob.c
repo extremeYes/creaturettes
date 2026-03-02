@@ -1,3 +1,6 @@
+////////////////////////////////
+/// nob.c
+
 #define NOB_IMPLEMENTATION
 #define NOB_STRIP_PREFIX
 #include "nob.h"
@@ -31,9 +34,9 @@ int main(int argc, byte **argv) {
         }
     }
 #ifdef _WIN32
-    const int nr = nob_needs_rebuild1("main.exe", SRC_DIR"main.c");
+    const int nr = (nob_needs_rebuild1("main.exe", SRC_DIR"main.c") || nob_needs_rebuild1("main.exe", SRC_DIR"game.c"));
 #else // _WIN32
-    const int nr = nob_needs_rebuild1("main", SRC_DIR"main.c");
+    const int nr = (nob_needs_rebuild1("main",     SRC_DIR"main.c") || nob_needs_rebuild1("main",     SRC_DIR"game.c"));
 #endif // _WIN32
     if (nr < 0) return 1;
 
@@ -84,6 +87,12 @@ int main(int argc, byte **argv) {
         C("-I./raylib-5.5_win64_mingw-w64/include/");
         // C("-DRELEASE");
         C("-DEXPERIMENTAL");
+        // optimizations!
+        C("-O3", "-march=native", "-ffast-math", "-flto", "-fno-math-errno");
+        // // tell me if you vectorized
+        // C("-fopt-info-vec");
+        // // tell me which loops were vectorized
+        // C("-fopt-info-vec-optimized", "-fopt-info-vec-missed");
         C("-o", "main.exe");
         C(SRC_DIR"main.c");
         C("-L./raylib-5.5_win64_mingw-w64/lib/");
@@ -95,6 +104,8 @@ int main(int argc, byte **argv) {
         C("-std=c99");
         C("-I./raylib-5.5_win64_mingw-w64/include/");
         // C("-DRELEASE");
+        // optimizations!
+        C("-O3", "-march=native", "-ffast-math", "-flto", "-fno-math-errno");
         C("-o", "ignoreddir/main.exe");
         C(SRC_DIR"main.c");
         C("-L./raylib-5.5_win64_mingw-w64/lib/");
