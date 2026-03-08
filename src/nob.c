@@ -3,7 +3,7 @@
 
 #define NOB_IMPLEMENTATION
 #define NOB_STRIP_PREFIX
-#include "nob.h"
+#include "../nob.h"
 
 #define SRC_DIR "src/"
 
@@ -22,6 +22,11 @@ int main(int argc, byte **argv) {
 
     // flags
     bool flag_force = false;
+
+    if (!nob_mkdir_if_not_exists("./bin")) {
+        printf("Could not make bin directory");
+        return 1;
+    }
 
     const char *program_name = shift(argv, argc);
     while (argc > 0) {

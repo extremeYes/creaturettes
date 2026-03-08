@@ -22,7 +22,7 @@
 // Stable (short-lived cells as per prototype_build_001)
 // DO NOT modify/delete
 #define PARTICELL_STARTING_VELOCITY 5.0f
-#define CELL_HITPOINTS   (1 * 2 * 1024)
+#define CELL_HITPOINTS   (1 * 2 * (1024 + 512))
 #define CELL_CORPSE_SPAN (1 * 8 * 1024)
 #define CELL_CORPSE_HIT_DAMAGE (32)
 // #define CELL_HITPOINTS   (4 * 8 * 1024)
@@ -422,6 +422,15 @@ void game_draw_ui(void) {
 
             , 20, 52, 20, CLITERAL(Color){ 0, 228, 48, (128 + 64 + 32) }
         );
+
+        DrawText(
+            "¡creaturettes!\n"
+            "\n"
+            "\n"
+            "Welcome...\n"
+
+            , 1920/2-300, 52, 40, CLITERAL(Color){ 0, 0, 0, 255 }
+        );
     } else {
         if (gogo) {
             DrawText("F1: Help", 20, 52, 20, CLITERAL(Color){ 0, 0, 0, 128 });
@@ -430,7 +439,7 @@ void game_draw_ui(void) {
         }
     }
 
-    u8 timer_display[32] = {0};
+    char timer_display[32] = {0};
     sprintf(timer_display, "t%3d", timer);
 
     if (show_debug_info) {
