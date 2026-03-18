@@ -1,6 +1,6 @@
 
 # creaturettes
 
-`./cleanstart.sh` to clean binaries and bootstrap nob
+QuickStart:
 
-`./nob` to build & run the project
+`./do`

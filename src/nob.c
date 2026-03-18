@@ -10,7 +10,7 @@
 typedef char byte;
 
 void announce_build_method(char *compiler, char *os) {
-    printf("\e[1;31m Compiling: \e[1;34m%s\e[m on \e[1;32m%s\e[m:\n", compiler, os);
+    printf("\e[1;34m Compiling: \e[1;31m%s\e[m on \e[1;32m%s\e[m:\n", compiler, os);
 }
 
 //@hoist
@@ -91,7 +91,6 @@ int main(int argc, byte **argv) {
         C("-std=c99");
         C("-I./raylib-5.5_win64_mingw-w64/include/");
         // C("-DRELEASE");
-        C("-DEXPERIMENTAL");
         // optimizations!
         C("-O3", "-march=native", "-ffast-math", "-flto", "-fno-math-errno");
         // // tell me if you vectorized
@@ -109,6 +108,7 @@ int main(int argc, byte **argv) {
         C("-std=c99");
         C("-I./raylib-5.5_win64_mingw-w64/include/");
         // C("-DRELEASE");
+        C("-DEXPERIMENTAL");
         // optimizations!
         C("-O3", "-march=native", "-ffast-math", "-flto", "-fno-math-errno");
         C("-o", "ignoreddir/main.exe");

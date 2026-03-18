@@ -22,7 +22,7 @@
 // Stable (short-lived cells as per prototype_build_001)
 // DO NOT modify/delete
 #define PARTICELL_STARTING_VELOCITY 5.0f
-#define CELL_HITPOINTS   (1 * 2 * (1024 + 512))
+#define CELL_HITPOINTS   (2 * 1 * (1024 + 512))
 #define CELL_CORPSE_SPAN (1 * 8 * 1024)
 #define CELL_CORPSE_HIT_DAMAGE (32)
 // #define CELL_HITPOINTS   (4 * 8 * 1024)
@@ -414,7 +414,7 @@ void game_draw_ui(void) {
             //@@ of the pre-preprocessor
             "F1: Help\n"
             "BACKSPACE: Exit\n"
-            "SPACE | F11 | Alt+ENTER: Play/Pause\n"
+            "SPACE|F11|Alt+ENTER: Play/Pause\n"
             "F5: Reset Simulation\n"
             "F8: Display Debug Info\n"
             "r: reset on-off\n"

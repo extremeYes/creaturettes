@@ -7,4 +7,8 @@ rm ./*.pdb
 
 rm ./nob ./main
 
+## Build && Run ##
+
 cc -o nob src/nob.c
+
+./nob
