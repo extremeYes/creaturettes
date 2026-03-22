@@ -1,6 +1,4 @@
-
 # creaturettes
 
-QuickStart:
-
-`./do`
+quickstart:  
+`./do.sh`
