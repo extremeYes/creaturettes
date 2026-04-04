@@ -1,6 +1,9 @@
 ////////////////////////////////
 /// game.h
 
+#ifndef GAME_H_
+#define GAME_H_
+
 ///
 //////
 ////////////
@@ -115,7 +118,7 @@ typedef enum {
     PARTY_MODE_CLOWN,
 } PartyMode;
 
-PartyMode party_mode = 1;
+PartyMode party_mode = PARTY_MODE_FIRE;
 
 u32 timer = 0;
 bool show_debug_info = false;
@@ -123,6 +126,8 @@ bool reset_enabled = true;
 bool gogo = false;
 bool show_help = false;
 u32 cycle_pos = 0;
+
+#endif // GAME_H_
 
 ///
 //////

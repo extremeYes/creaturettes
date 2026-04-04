@@ -38,9 +38,9 @@ int main(int argc, char **argv) {
         }
     }
 #ifdef _WIN32
-    const int nr = (nob_needs_rebuild1(BIN_DIR"main.exe", SRC_DIR"main.c") || nob_needs_rebuild1(BIN_DIR"main.exe", SRC_DIR"game.c"));
+    const int nr = (nob_needs_rebuild1(BIN_DIR"main.exe", SRC_DIR"main.c") || nob_needs_rebuild1(BIN_DIR"main.exe", SRC_DIR"game.h"));
 #else // _WIN32
-    const int nr = (nob_needs_rebuild1(BIN_DIR"main",     SRC_DIR"main.c") || nob_needs_rebuild1(BIN_DIR"main",     SRC_DIR"game.c"));
+    const int nr = (nob_needs_rebuild1(BIN_DIR"main",     SRC_DIR"main.c") || nob_needs_rebuild1(BIN_DIR"main",     SRC_DIR"game.h"));
 #endif // _WIN32
     if (nr < 0) return 1;
 
@@ -110,7 +110,7 @@ int main(int argc, char **argv) {
         C("-DEXPERIMENTAL");
         // optimizations!
         C("-O3", "-march=native", "-ffast-math", "-flto", "-fno-math-errno");
-        C("-o", "ignoreddir/main.exe");
+        C("-o", "ignored/main.exe");
         C(SRC_DIR"main.c");
         C("-L./raylib-5.5_win64_mingw-w64/lib/");
         C("-lraylib", "-lgdi32", "-lwinmm");

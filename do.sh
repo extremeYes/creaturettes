@@ -1,18 +1,24 @@
 #!/usr/bin/env bash
 
-{
-    set -x
+PS4=$'\e[31m$ \e[m'
+set -x
 
-    rm ./*.exe*
-    rm ./*.pdb
+## Remove Binaries ##
 
-    rm ./nob ./main
-} 2>/dev/null
+rm ./*.exe*
+rm ./*.pdb
+
+rm ./nob ./main
+
+rm -r bin/*
 
 ## Build && Run ##
 
-set -xe
+set -e
 
-cc -o nob src/nob.c
+mkdir -p bin
+mkdir -p ignored
 
-./nob
+cc -o bin/nob src/nob.c
+
+./bin/nob

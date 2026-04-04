@@ -2,16 +2,16 @@
 
 ## gameplay
 
-map
+map:
 
 regions/fog/nutrients/zone/gradient
 
-plants
+plants:
 
 bush is gravity
 consumes cells
 
-animals (?)
+animals (?):
 
 celularam // memory!
 
@@ -20,3 +20,17 @@ celularam // memory!
 rendering (sprites)
 
 polar coordinates !!
+
+## some game data
+
+```md
+## Main Game Mode
+difficulty: extremely hard
+duration: potentially long
+reward: victory
+
+## Secondary Game Mode
+difficulty: easier, but faster paced
+duration: potentially shorter
+reward: snappier gameplay
+```

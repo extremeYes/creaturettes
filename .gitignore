@@ -1,4 +1,4 @@
-ignoreddir/
+ignored/
 .vscode/
 *.exe*
 *.out
