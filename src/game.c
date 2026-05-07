@@ -1,5 +1,5 @@
 ////////////////////////////////
-/// game_api.c
+/// game.c
 
 #include "game_render.c"
 #include "game_init.c"

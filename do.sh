@@ -19,6 +19,6 @@ set -e
 mkdir -p bin
 mkdir -p ignored
 
-cc -o bin/nob src/nob.c
+cc -o nob src/nob.c
 
-./bin/nob
+./nob

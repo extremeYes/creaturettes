@@ -1,7 +1,7 @@
 ////////////////////////////////
 /// main.c
 
-#include "game_api.c"
+#include "game.c"
 
 int main(void) {
 #ifdef RELEASE
