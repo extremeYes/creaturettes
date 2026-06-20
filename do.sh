@@ -21,4 +21,4 @@ mkdir -p ignored
 
 cc -o nob src/nob.c
 
-./nob
+./nob "$@"
