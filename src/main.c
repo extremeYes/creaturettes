@@ -19,6 +19,12 @@ int main(void) {
 
     game_init();
 
+    // one frame seems to be needed before enabling borderless window
+    BeginDrawing();
+    EndDrawing();
+    ToggleBorderlessWindowed();
+    gogo = true;
+
     while (!WindowShouldClose()) {
 
         game_process_inputs();

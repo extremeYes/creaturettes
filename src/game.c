@@ -8,7 +8,7 @@
 void game_process_inputs(void) {
     /// Menu Keys
 
-    if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_F11) || ( IsKeyPressed(KEY_ENTER) && IsKeyDown(KEY_LEFT_ALT) )) {
+    if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_F11) || (IsKeyPressed(KEY_ENTER) && IsKeyDown(KEY_LEFT_ALT))) {
         gogo = !gogo;
         ToggleBorderlessWindowed();
     }
