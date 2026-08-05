@@ -6,6 +6,7 @@
 #include "game_tick.c"
 
 void game_process_inputs(void) {
+
     /// Menu Keys
 
     if (IsKeyPressed(KEY_SPACE) || IsKeyPressed(KEY_F11) || (IsKeyPressed(KEY_ENTER) && IsKeyDown(KEY_LEFT_ALT))) {
@@ -56,7 +57,8 @@ void game_run_tick(void) {
     if (gogo) {
         cycle_pos += 1;
 
-        if ((cycle_pos % TIME_COEF) == 0) game_update(); // GAME !
+        if ((cycle_pos % TIME_COEF) == 0)
+            game_update(); // GAME !
         game_render();
     } else {
         DrawText("BackSpace: Exit", 450, 272, 20, CLITERAL(Color){ 230, 41, 55, 128 + 64 });
