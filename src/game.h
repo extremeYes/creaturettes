@@ -4,14 +4,6 @@
 #ifndef GAME_H_
 #define GAME_H_
 
-///
-//////
-////////////
-////////////////////////
-////////////
-//////
-///
-
 ////////////////
 /// headers
 
@@ -51,13 +43,20 @@ typedef ptrdiff_t isize; // Signed, pointer-sized
 typedef float  f32;   // IEEE 754 Single Precision
 typedef double f64;   // IEEE 754 Double Precision
 
+///
+//////
+////////////
+////////////////////////
+////////////
+//////
+///
 
 /// Static Globals
 
 #define FPS_COEF 1.5f // game fps cap will be 60 * FPS_COEF
 #define TIME_COEF 1 // game update tick happens every this number of frames
                     // if both are equal, then game is 60 ticks per second
-#define RESET_TIME (3 * 1024) // these ticks and auto-reset if enabled
+#define RESET_TIME (2 * 1024) // these ticks and auto-reset if enabled
 #define TICKS_TO_FREEDOM 1 // ticks until map opens up
 
 // #define MAP_CIRCULAR_SIZE (1920 / 2) // overridden by the f32 below for now (temporary)
@@ -165,8 +164,6 @@ bool gogo = false;
 bool show_help = false;
 u32 cycle_pos = 0;
 
-#endif // GAME_H_
-
 ///
 //////
 ////////////
@@ -174,3 +171,5 @@ u32 cycle_pos = 0;
 ////////////
 //////
 ///
+
+#endif // GAME_H_
